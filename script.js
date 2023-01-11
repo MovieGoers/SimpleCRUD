@@ -27,13 +27,19 @@ function onClick(){
     li.id = i;
     lists.append(li);
 
+    text.value='';
+
     i++;
 }
 
 function onClickDelete(){
-    let lidelete = document.getElementById(i-1);
-    lists.removeChild(lidelete);
-    i--;
+    if(i === 1){
+        alert('You don\'t have anything to delete!');
+    }else{
+        let lidelete = document.getElementById(i-1);
+        lists.removeChild(lidelete);
+        i--;
+    }
 }
 
 nightdaybtn.addEventListener("click", onClickChangeNightDay);
