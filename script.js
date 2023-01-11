@@ -36,7 +36,7 @@ function onClickList(event){
     textBig.value=listInside[event.target.id];
 
     clickedListId = event.target.id;
-    document.getElementById('choice').innerHTML = 'You chose '+clickedListId+'.';
+    document.getElementById('choice').innerHTML = 'You chose '+document.getElementById(clickedListId).innerHTML+'.';
 }
 
 function onClick(){
@@ -67,6 +67,7 @@ function onClickDelete(){
         lists.removeChild(lidelete);
         listInside.pop();
         i--;
+        document.getElementById('choice').innerHTML = '';
     }
 }
 
@@ -79,6 +80,7 @@ function onClickUpdate(){
         templist = document.getElementById(clickedListId);
         templist.innerHTML = text.value;
         listInside[clickedListId] = textBig.value;
+        document.getElementById('choice').innerHTML = 'Updated!';
     }
 }
 
