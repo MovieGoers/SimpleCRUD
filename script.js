@@ -1,4 +1,4 @@
-const title = document.getElementById("main-title");
+const lists = document.getElementById("lists");
 const text = document.getElementById("inputs");
 const btn = document.getElementById("btn");
 const nightdaybtn = document.getElementById("night-day");
@@ -18,7 +18,10 @@ function onClickChangeNightDay(){
 }
 
 function onClick(){
-    title.innerHTML = text.value;
+    let li = document.createElement('li');
+    
+    li.innerHTML = text.value;
+    lists.append(li);
 }
 
 nightdaybtn.addEventListener("click", onClickChangeNightDay);
