@@ -28,7 +28,8 @@ body{
     transform: translate(-50%, -50%);
 }
 #inputs{
-    width: 300px
+    width: 300px;
+    border-radius: 10px;
 }
 
 #input-big{
