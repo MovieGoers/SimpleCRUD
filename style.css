@@ -1,2 +1,37 @@
-.day{
+*{
+    margin:1px;
+    padding:0;
+    box-sizing: border-box;
+}
+.head1{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.button{
+    font-size: 140%;
+    border: none;
+    border-radius: 10px;
+    width:145px;
+    height: 60px;
+}
+
+body{
+    background-color: cornflowerblue;
+}
+
+.wrap{
+    font-size: 150%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+#inputs{
+    width: 300px
+}
+
+#input-big{
+    width:300px;
+    height: 200px;
+    border-radius: 10px
 }

@@ -7,15 +7,23 @@
     </head>
 
     <body id="main-body" class="day">
-        <p><input type="button" value="night/day" id="night-day">
+        <div class="wrap">
+        <h1 class="head1">CRUD TEST</h1>
+        <p>
+        <input type="button" value="night/day" id="night-day" class="button">
+        <input type="button" id="btn" value="submit" class="button">
+        </p>
+        <p>
+        <input type="button" id="btndelete" value="delete" class="button">
+        <input type="button" id="btnupdate" value="update" class="button">
+        </p>
+        </p>
         <ol id="lists">
         </ol>
+        <p id="choice"></p>
         <p><input type="text" id="inputs"></p>
-        <p>
-            <input type="button" id="btn" value="submit">
-            <input type="button" id="btndelete" value="delete">
-        </p>
-
+        <p><input type="text" id="input-big"></p>
+        </div>
         <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
