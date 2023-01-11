@@ -21,15 +21,19 @@ function onClickChangeNightDay(){
 }
 
 function onClick(){
-    let li = document.createElement('li');
+    if(text.value===''){
+        alert('Please write something!');
+    }else{
+        let li = document.createElement('li');
     
-    li.innerHTML = text.value;
-    li.id = i;
-    lists.append(li);
-
-    text.value='';
-
-    i++;
+        li.innerHTML = text.value;
+        li.id = i;
+        lists.append(li);
+    
+        text.value='';
+    
+        i++;
+    }
 }
 
 function onClickDelete(){
