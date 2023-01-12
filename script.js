@@ -36,7 +36,7 @@ function onClickList(event){
     textBig.value=listInside[event.target.id];
 
     clickedListId = event.target.id;
-    document.getElementById('choice').innerHTML = 'You chose '+document.getElementById(clickedListId).innerHTML+'.';
+    document.getElementById('choice').textContent = 'You chose '+document.getElementById(clickedListId).textContent+'.';
 }
 
 function onClick(){
@@ -45,7 +45,7 @@ function onClick(){
     }else{
         let li = document.createElement('li');
     
-        li.innerHTML = text.value;
+        li.textContent = text.value;
         listInside.push(textBig.value);
 
         li.id = i;
@@ -64,9 +64,10 @@ function onClickDelete(){
         alert('You don\'t have anything to delete!');
     }else{
         let lidelete = document.getElementById(clickedListId);
+        document.getElementById('choice').textContent = lidelete.textContent+" delete!";
         lists.removeChild(lidelete);
-
-        document.getElementById('choice').innerHTML = '';
+        text.value='';
+        textBig.value='';
     }
 }
 
@@ -77,9 +78,9 @@ function onClickUpdate(){
         alert('Please write something!');
     }else{
         templist = document.getElementById(clickedListId);
-        templist.innerHTML = text.value;
+        templist.textContent = text.value;
         listInside[clickedListId] = textBig.value;
-        document.getElementById('choice').innerHTML = 'Updated!';
+        document.getElementById('choice').textContent = 'Updated!';
     }
 }
 
