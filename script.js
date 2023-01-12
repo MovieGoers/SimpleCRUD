@@ -32,7 +32,7 @@ function onClickChangeNightDay(){
 }
 
 function onClickList(event){
-    text.value=event.target.innerHTML;
+    text.value=event.target.textContent;
     textBig.value=listInside[event.target.id];
 
     clickedListId = event.target.id;
@@ -63,10 +63,9 @@ function onClickDelete(){
     if(i === 1){
         alert('You don\'t have anything to delete!');
     }else{
-        let lidelete = document.getElementById(i-1);
+        let lidelete = document.getElementById(clickedListId);
         lists.removeChild(lidelete);
-        listInside.pop();
-        i--;
+
         document.getElementById('choice').innerHTML = '';
     }
 }

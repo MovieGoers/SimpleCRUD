@@ -20,6 +20,10 @@ body{
     background-color: cornflowerblue;
 }
 
+.mybtn{
+    margin-left: 150px;
+}
+
 .wrap{
     font-size: 150%;
     position:absolute;
